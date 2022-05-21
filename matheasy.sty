@@ -1,0 +1,69 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{matheasy}[2022/05/21 MathEasy Package]
+
+\RequirePackage{mathtools}
+\RequirePackage{mleftright}
+\RequirePackage{mathpazo}
+
+% bracket
+\newcommand{\br}[1]{\ensuremath{\mleft(#1\mright)}}
+% absolut value
+\newcommand{\abs}[1]{\ensuremath{\left\vert#1\right\vert}}
+
+% fix math
+\DeclareMathOperator{\cosec}{cosec}
+\DeclareMathOperator{\arcsec}{arcsec}
+\DeclareMathOperator{\arccsc}{arccsc}
+\DeclareMathOperator{\arccot}{arccot}
+
+% sin
+\let\oldsin\sin
+\renewcommand*{\sin}[1]{\oldsin\br{#1}}
+\newcommand{\sinx}{\sin{x}}
+% cos
+\let\oldcos\cos
+\renewcommand*{\cos}[1]{\oldcos\br{#1}}
+\newcommand{\cosx}{\cos{x}}
+% tan
+\let\oldtan\tan
+\renewcommand*{\tan}[1]{\oldtan\br{#1}}
+\newcommand{\tanx}{\tan{x}}
+% cot
+\let\oldcot\cot
+\renewcommand*{\cot}[1]{\oldcot\br{#1}}
+\newcommand{\cotx}{\cot{x}}
+% sec
+\let\oldsec\sec
+\renewcommand*{\sec}[1]{\oldsec\br{#1}}
+\newcommand{\secx}{\sec{x}}
+% cosec
+\let\oldcosec\cosec
+\renewcommand*{\cosec}[1]{\oldcosec\br{#1}}
+\newcommand{\cosecx}{\cosec{x}}
+
+% arcsin
+\let\oldarcsin\arcsin
+\renewcommand*{\arcsin}[1]{\oldarcsin\br{#1}}
+\newcommand{\arcsinx}{\arcsin{x}}
+% arccos
+\let\oldarccos\arccos
+\renewcommand*{\arccos}[1]{\oldarccos\br{#1}}
+\newcommand{\arccosx}{\arccos{x}}
+% tan
+\let\oldarctan\arctan
+\renewcommand*{\arctan}[1]{\oldarctan\br{#1}}
+\newcommand{\arctanx}{\arctan{x}}
+% arccot
+\let\oldarccot\arccot
+\renewcommand*{\arccot}[1]{\oldarccot\br{#1}}
+\newcommand{\arccotx}{\arccot{x}}
+% arcsec
+\let\oldarcsec\arcsec
+\renewcommand*{\arcsec}[1]{\oldarcsec\br{#1}}
+\newcommand{\arcsecx}{\arcsec{x}}
+% arccsc
+\let\oldarccsc\arccsc
+\renewcommand*{\arccsc}[1]{\oldarccsc\br{#1}}
+\newcommand{\arccscx}{\arccsc{x}}
+
+\endinput
